@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task2 {
-    /*
+    /**
      *HW2:
      * Go to  “<a href="http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login%E2%80%9D">...</a>
      * Enter valid username
      * Leave password field empty
      * Click on login button
      * Verify error message with text “Password cannot be empty” is displayed.
-     */
+     **/
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver= new ChromeDriver(); // creating instance/object of ChromeDriver
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login%E2%80%9D"); // navigating to URL
@@ -32,7 +32,7 @@ public class Task2 {
         }else{
             System.out.println("Error message is not displayed");
         }
+        Thread.sleep(2000);
         driver.quit();
     }
 }
-S

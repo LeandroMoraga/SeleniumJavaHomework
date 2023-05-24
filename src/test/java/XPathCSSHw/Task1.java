@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task1 {
-    /*
+    /**
      *HW1:
      * Open Chrome browser
      * Go to <a href="http://practice.syntaxtechs.net/input-form-demo.php">...</a>
      * fill in the complete form
-     */
+     **/
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver= new ChromeDriver();
         driver.get("http://practice.syntaxtechs.net/input-form-demo.php");
@@ -41,6 +41,9 @@ public class Task1 {
         no.click();
         WebElement projectDesciption=driver.findElement(By.xpath("//textarea[@name='comment']"));
         projectDesciption.sendKeys("Selenium is fun with Sir Moazzam :)");
+        Thread.sleep(2000);
+        WebElement sendButton=driver.findElement(By.xpath("//button[text()='Send ']"));
+        sendButton.click();
         Thread.sleep(2000);
         driver.quit();
     }
