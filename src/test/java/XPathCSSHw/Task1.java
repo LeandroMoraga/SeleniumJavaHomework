@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task1 {
-    /**
+    /*
      *HW1:
      * Open Chrome browser
      * Go to <a href="http://practice.syntaxtechs.net/input-form-demo.php">...</a>

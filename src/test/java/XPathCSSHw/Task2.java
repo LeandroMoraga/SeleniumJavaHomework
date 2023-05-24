@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task2 {
-    /**
+    /*
      *HW2:
      * Go to  “<a href="http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login%E2%80%9D">...</a>
      * Enter valid username
@@ -35,3 +35,4 @@ public class Task2 {
         driver.quit();
     }
 }
+S
