@@ -2,9 +2,11 @@ package Utils;
 
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class CommonMethods {
 
@@ -31,5 +33,26 @@ public class CommonMethods {
         if(driver!=null){
             driver.quit();
         }
+    }
+
+    public static void sendText(WebElement element,String text){
+        element.clear();
+        element.sendKeys(text);
+    }
+
+    public static void singleSelectByValue(WebElement element,String byValue){
+        Select sel = new Select(element);
+        sel.selectByValue(byValue);
+    }
+
+    public static void singleSelectByText(WebElement element,String byText){
+        Select sel = new Select(element);
+        sel.selectByVisibleText(byText);
+    }
+
+
+    public static void singleSelectByIndex(WebElement element,int index){
+        Select sel = new Select(element);
+        sel.selectByIndex(index);
     }
 }
