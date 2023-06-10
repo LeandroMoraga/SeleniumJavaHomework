@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
+
 public class CommonMethods {
 
     public static WebDriver driver;
@@ -26,6 +28,7 @@ public class CommonMethods {
         }
         driver.manage().window().maximize();
         driver.get(url);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
 
