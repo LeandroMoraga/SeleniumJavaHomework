@@ -4,12 +4,14 @@ import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
 import java.util.List;
+
 public class Task1 extends CommonMethods {
     public static void main(String[] args) {
-        String url="http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/dashboard";
-        String browser="chrome";
-        openBrowserAndLaunchApplication(url,browser);
+        String url = "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/dashboard";
+        String browser = "chrome";
+        openBrowserAndLaunchApplication(url, browser);
         /*
         task: HW1:
         go to syntax hrms
@@ -34,26 +36,26 @@ public class Task1 extends CommonMethods {
         WebElement calendar = driver.findElement(By.xpath("//input[@id='candidateSearch_fromDate']"));
         calendar.click();
 
-       WebElement monthDD = driver.findElement(By.xpath("//select[@class='ui-datepicker-month']"));
+        WebElement monthDD = driver.findElement(By.xpath("//select[@class='ui-datepicker-month']"));
         Select month = new Select(monthDD);
         month.selectByVisibleText("Mar");
 
-       WebElement yearDD=driver.findElement(By.xpath("//select[@class='ui-datepicker-year']"));
-       Select year = new Select(yearDD);
-       year.selectByValue("2004");
+        WebElement yearDD = driver.findElement(By.xpath("//select[@class='ui-datepicker-year']"));
+        Select year = new Select(yearDD);
+        year.selectByValue("2004");
 
 
-       List<WebElement>days = driver.findElements(By.xpath("//table/tbody/tr/td"));
+        List<WebElement> days = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//tr/td"));
 
        /*
        I want March, 3rd, 2004
         */
-       for(WebElement day:days){
-           String dayText=day.getText();
-           if(dayText.equals("3")){
-               day.click();
-               break;
-           }
-       }
+        for (WebElement day : days) {
+            String dayText = day.getText();
+            if (dayText.equals("3")) {
+                day.click();
+                break;
+            }
+        }
     }
 }
